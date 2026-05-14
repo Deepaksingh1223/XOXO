@@ -17,7 +17,7 @@ export default function Footer() {
               <div className="col-lg-5 col-xl-4">
                 <div className="footer-logo">
                   <Image 
-                    src="/assets/img/logo3.png" 
+                    src="/white.png" 
                     alt="Aior Logo" 
                     width={150} 
                     height={50}

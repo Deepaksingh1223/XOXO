@@ -600,7 +600,7 @@ export default function AllSection() {
                         ))}
                       </ul>
                     </div>
-                    <Link href="/" className="th-btn black-border fw-btn">
+                    <Link href="/" className="th-btn black-border fw-btn add-hover">
                       Get Started{' '}
                       <span className="icon">
                         <Image src="/assets/img/icon/arrow-right.svg" alt="" width={16} height={16} />

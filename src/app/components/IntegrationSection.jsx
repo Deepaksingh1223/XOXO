@@ -5,10 +5,26 @@ import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 
 const integrations = [
-  { icon: 'icons-img.png', title: 'Centralized Exchange' },
-  { icon: 'icons-img.png', title: 'Traditional DEX' },
-  { icon: 'icons-img.png', title: 'XOXOFX DEXX' },
-  { icon: 'icons-img.png', title: 'Payment Settlement Layer' },
+  {
+    title: 'Centralized Exchange',
+    text: 'Limited to trade aggregation. Users must make directional decisions and bear slippage and MEV costs.',
+    icon: '/assets/images/icons-img.png',
+  },
+  {
+    title: 'Traditional DEX',
+    text: 'MEV value is largely captured by external bots. Returns are fully dependent on crypto market volatility.',
+    icon: '/assets/images/icons-img.png',
+  },
+  {
+    title: 'XOXOFX DEXX',
+    text: 'Goes beyond aggregation with active capital orchestration. DEXX Engine connects on-chain trading with off-chain payment settlement.',
+    icon: '/assets/images/icons-img.png',
+  },
+  {
+    title: 'Payment Settlement Layer',
+    text: 'Generates real, sustainable cash flow beyond pure crypto market cycles through settlement liquidity.',
+    icon: '/assets/images/icons-img.png',
+  },
 ];
 
 export default function IntegrationSection() {
@@ -20,26 +36,37 @@ export default function IntegrationSection() {
 
     const loadScript = (src) =>
       new Promise((resolve) => {
-        if (document.querySelector(`script[src="${src}"]`)) return resolve();
-        const s = document.createElement('script');
-        s.src = src;
-        s.onload = resolve;
-        document.body.appendChild(s);
+        if (document.querySelector(`script[src="${src}"]`)) {
+          resolve();
+          return;
+        }
+
+        const script = document.createElement('script');
+        script.src = src;
+        script.onload = resolve;
+        document.body.appendChild(script);
       });
 
-    const init = async () => {
-      await loadScript('https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js');
+    const initWOW = async () => {
+      await loadScript(
+        'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'
+      );
 
       if (window.WOW) {
-        new window.WOW({ live: false, offset: 100 }).init();
+        new window.WOW({
+          live: false,
+          offset: 100,
+        }).init();
       }
 
-      document.querySelectorAll('.text-anime-style-2, .text-anime-style-3').forEach((el) => {
-        el.style.opacity = '1';
-      });
+      document
+        .querySelectorAll('.text-anime-style-2, .text-anime-style-3')
+        .forEach((el) => {
+          el.style.opacity = '1';
+        });
     };
 
-    init();
+    initWOW();
   }, []);
 
   return (
@@ -54,30 +81,44 @@ export default function IntegrationSection() {
               >
                 How DEXX Differs From Other DEXs
               </span>
+
               <h2
                 className="sec-title text-white text-anime-style-3 wow fadeInUp"
                 data-wow-delay=".2s"
-              > 
+              >
                 Beyond Aggregation with Active Capital Orchestration
               </h2>
             </div>
 
             <div className="download-img-wrapp">
-              <div className="download-image style1 wow zoomIn" data-wow-delay="0.15s">
+              <div
+                className="download-image style1 wow zoomIn"
+                data-wow-delay="0.15s"
+              >
                 <Image
                   src="/assets/images/icons-img.png"
                   alt="XOXOFX Evolution"
                   width={1000}
-                  height={100}
+                  height={500}
+                  className="img-fluid"
                 />
               </div>
             </div>
 
-            <div className="position-relative z-index-3 mt-60 text-center mb-80 wow fadeInUp" data-wow-delay=".4s">
+            <div
+              className="position-relative z-index-3 mt-60 text-center mb-80 wow fadeInUp"
+              data-wow-delay=".4s"
+            >
               <Link href="/" className="th-btn">
-                Launch Arbitrage System{' '}
-                <span className="icon">
-                  <Image src="/assets/img/icon/arrow-right.svg" alt="" width={16} height={16} />
+                Launch Arbitrage System
+
+                <span className="icon ms-2">
+                  <Image
+                    src="/assets/img/icon/arrow-right.svg"
+                    alt="arrow"
+                    width={16}
+                    height={16}
+                  />
                 </span>
               </Link>
             </div>
@@ -96,20 +137,17 @@ export default function IntegrationSection() {
                 <div className="box-content">
                   <div className="box-icon">
                     <Image
-                      src={`/assets/img/icon/${item.icon}`}
-                      alt=""
+                      src="/assets/images/icons-img.png"
+                      alt="icon"
                       width={50}
                       height={50}
                     />
                   </div>
+
                   <h3 className="box-title">{item.title}</h3>
                 </div>
-                <p className="box-text">
-                  {item.title === 'Centralized Exchange' && 'Limited to trade aggregation. Users must make directional decisions and bear slippage and MEV costs.'}
-                  {item.title === 'Traditional DEX' && 'MEV value is largely captured by external bots. Returns are fully dependent on crypto market volatility.'}
-                  {item.title === 'XOXOFX DEXX' && 'Goes beyond aggregation with active capital orchestration. DEXX Engine connects on-chain trading with off-chain payment settlement.'}
-                  {item.title === 'Payment Settlement Layer' && 'Generates real, sustainable cash flow beyond pure crypto market cycles through settlement liquidity.'}
-                </p>
+
+                <p className="box-text">{item.text}</p>
               </div>
             </div>
           ))}
