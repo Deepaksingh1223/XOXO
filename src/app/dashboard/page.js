@@ -460,8 +460,8 @@ export default function DashboardPage() {
               <div style={{ fontSize: "10px", color: "var(--t2)", fontWeight: 700, textTransform: "uppercase", letterSpacing: ".6px", marginBottom: "6px" }}>
                 Your Unique Referral Link
               </div>
-              <div className="ref-link" style={{ background: "var(--card2)", padding: "10px", borderRadius: "8px", fontSize: "11px", fontFamily: "monospace", marginBottom: "10px", wordBreak: "break-all" }}>https://arbion.ai/ref/ARB-a9x7k2-premium</div>
-              <button className="copy-btn" onClick={copyRef} style={{ width: "100%", padding: "10px", marginBottom: "14px", background: "var(--pb)", border: "none", borderRadius: "8px", color: "white", fontWeight: "bold", cursor: "pointer" }}>
+              <div className="ref-link" >https://arbion.ai/ref/ARB-a9x7k2-premium</div>
+              <button className="copy-btn" onClick={copyRef} >
                 {copySuccess ? "✓ Copied!" : "📋 Copy Referral Link"}
               </button>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "6px", marginBottom: "14px" }}>
@@ -757,7 +757,7 @@ export default function DashboardPage() {
               <div className="ct" style={{ fontWeight: 'bold' }}>Live Opportunities <span className="lb"><span style={{ width: "5px", height: "5px", borderRadius: "50%", background: "var(--brand-green)", display: "inline-block" }}></span>LIVE</span></div>
               <div className="csub" style={{ fontSize: '10px', color: 'var(--t2)' }}>Real-time arbitrage detection</div>
             </div>
-            <div className="va" onClick={openRef} style={{ cursor: "pointer", fontSize: '11px', color: '#a78bfa' }}>View all →</div>
+            <div className="va" onClick={openRef} style={{ cursor: "pointer", fontSize: '11px', color: '#a78bfa' }}>View all</div>
           </div>
           <div className="olist" id="ol" ref={oppLRef}></div>
         </div>
