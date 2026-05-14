@@ -30810,7 +30810,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .price-box.active .box-icon {
-    background-color: var(--theme-color2)
+    background-color: #fff
 }
 
 .price-box.active .box-icon img {
@@ -38276,4 +38276,8 @@ span.select2-selection.select2-selection--single:focus {
 }
 .th-btn .icon img {
     filter: invert(1) !important;
+}
+
+a.th-btn.black-border.fw-btn.add-hover:hover{
+    color: #fff !important;
 }
