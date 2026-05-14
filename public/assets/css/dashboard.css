@@ -1153,11 +1153,7 @@ button {
   border: 1px solid
 }
 
-.ic {
-  background: rgba(0, 212, 255, .1);
-  border-color: rgba(0, 212, 255, .2)
-}
-
+ 
 .ip {
   background: rgba(139, 92, 246, .1);
   border-color: rgba(139, 92, 246, .2)
@@ -2122,7 +2118,7 @@ button {
   .npip,
   .nbadge,
   .uinfo,
-  .uarr,{
+  .uarr{
     display: none
   }
 
@@ -2423,7 +2419,7 @@ button {
 .auth-sub {
   text-align: center;
   font-size: 11.5px;
-  color: varvar(--t2);
+  color: var(--text-1);
   margin-bottom: 22px
 }
 
@@ -2490,7 +2486,7 @@ button {
 }
 
 .fi::placeholder {
-  color: varvar(--t2)
+  color: var(--text-1)
 }
 
 select.fi {
@@ -2664,7 +2660,7 @@ a.ni {
   padding: 10px 8px 3px;
   font-size: 9.5px;
   font-weight: 800;
-  color: varvar(--t2);
+  color: var(--text-1);
   letter-spacing: 1.8px;
   text-transform: uppercase
 }
@@ -2683,12 +2679,7 @@ a.ni {
   position: relative;
   white-space: nowrap
 }
-
-.ni:hover {
-  background: var(--pgg);
-  color: var(--t1)
-}
-
+ 
 .ni.on {
   background: var(--pg);
   color: var(--pb);
@@ -2734,8 +2725,8 @@ a.ni {
   height: 7px;
   min-width: 7px;
   border-radius: 50%;
-  background: varvar(--t2);
-  box-shadow: 0 0 6px varvar(--t2);
+  background: var(--text-1);
+  box-shadow: 0 0 6px var(--text-1);
   animation: blink 2s infinite
 }
 
@@ -2768,13 +2759,13 @@ a.ni {
 .sb-bot-lbl {
   font-size: 10.5px;
   font-weight: 800;
-  color: varvar(--t2)
+  color: var(--text-1)
 }
 
 .sb-bot-up {
   font-size: 10px;
   font-family: var(--mono);
-  color: varvar(--t2)
+  color: var(--text-1)
 }
 
 /* ── MAIN ── */
@@ -2798,7 +2789,7 @@ a.ni {
 }
 
 .tb-title span {
-  color: varvar(--t2);
+  color: var(--text-1);
   font-weight: 400;
   font-size: 12px
 }
@@ -2840,7 +2831,7 @@ a.ni {
 .gas-p {
   font-family: var(--mono);
   font-size: 10.5px;
-  color: varvar(--t2);
+  color: var(--text-1);
   background: var(--card);
   border: 1px solid var(--b1);
   padding: 4px 10px;
@@ -3251,7 +3242,7 @@ svg.svg-size {
 .ml {
   font-size: 10px;
   font-weight: 700;
-  color: varvar(--t2);
+  color: var(--text-1);
   text-transform: uppercase;
   letter-spacing: .7px;
   margin-bottom: 5px
@@ -3354,7 +3345,7 @@ svg.svg-size {
   height: 7px;
   min-width: 7px;
   border-radius: 50%;
-  background: varvar(--t2);
+  background: var(--text-1);
   position: relative;
   display: inline-block;
   flex-shrink: 0
@@ -3365,7 +3356,7 @@ svg.svg-size {
   position: absolute;
   inset: -3px;
   border-radius: 50%;
-  border: 2px solid varvar(--t2);
+  border: 2px solid var(--text-1);
   animation: ping 1.5s cubic-bezier(0, 0, .2, 1) infinite;
   opacity: .5
 }
@@ -3433,7 +3424,7 @@ svg.svg-size {
   padding: 7px 10px;
   font-size: 10px;
   font-weight: 700;
-  color: varvar(--t2);
+  color:var(--t2);
   text-transform: uppercase;
   letter-spacing: .5px;
   border-bottom: 1px solid var(--b1);
@@ -3512,7 +3503,7 @@ svg.svg-size {
 
 .ec-lbl {
   font-size: 10px;
-  color: varvar(--t2);
+  color: var(--text-1);
   font-weight: 600
 }
 
@@ -3531,7 +3522,7 @@ svg.svg-size {
 
 .ec-time {
   font-size: 9.5px;
-  color: varvar(--t2);
+  color: var(--text-1);
   font-family: var(--mono);
   margin-top: 3px
 }
@@ -3629,7 +3620,7 @@ svg.svg-size {
   font-size: 22px;
   font-weight: 900;
   font-family: var(--mono);
-  color: varvar(--t2);
+  color: var(--text-1);
   letter-spacing: 2px
 }
 
@@ -3678,7 +3669,7 @@ svg.svg-size {
   margin-left: auto;
   font-family: var(--mono);
   font-weight: 800;
-  color: varvar(--t2);
+  color: var(--text-1);
   font-size: 12.5px;
   flex-shrink: 0
 }
@@ -3712,7 +3703,7 @@ svg.svg-size {
 }
 
 .tx-t {
-  color: varvar(--t2);
+  color: var(--text-1);
   min-width: 50px;
   flex-shrink: 0
 }
@@ -3737,7 +3728,7 @@ svg.svg-size {
 }
 
 .tx-p {
-  color: varvar(--t2);
+  color: var(--text-1);
   font-weight: 700;
   flex-shrink: 0
 }
@@ -3787,14 +3778,14 @@ svg.svg-size {
 
 .sc-d {
   font-size: 10.5px;
-  color: varvar(--t2);
+  color: var(--text-1);
   margin-bottom: 6px
 }
 
 .sc-a {
   font-size: 15px;
   font-weight: 900;
-  color: varvar(--t2);
+  color: var(--text-1);
   font-family: var(--mono)
 }
 
@@ -3808,7 +3799,7 @@ svg.svg-size {
 
 .sg-l {
   font-size: 9.5px;
-  color: varvar(--t2);
+  color: var(--text-1);
   margin-bottom: 3px;
   font-weight: 700;
   text-transform: uppercase;
@@ -4020,7 +4011,7 @@ svg.svg-size {
 .al-s {
   background: var(--gd);
   border: 1px solid rgba(16, 185, 129, .25);
-  color: varvar(--t2)
+  color: var(--text-1)
 }
 
 /* ── REF LINK ── */
@@ -4301,15 +4292,15 @@ svg.svg-size {
 
 .fu-time {
   font-size: 9px;
-  color: varvar(--t2)
+  color: var(--text-1)
 }
 
 .fu-dot {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: varvar(--t2);
-  box-shadow: 0 0 4px varvar(--t2);
+  background: var(--text-1);
+  box-shadow: 0 0 4px var(--text-1);
   flex-shrink: 0;
   animation: blink 2s infinite
 }
@@ -4420,7 +4411,7 @@ svg.svg-size {
 
 .bps-l {
   font-size: 9.5px;
-  color: varvar(--t2);
+  color: var(--text-1);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .3px;
@@ -4446,8 +4437,8 @@ svg.svg-size {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: varvar(--t2);
-  box-shadow: 0 0 5px varvar(--t2);
+  background: var(--text-1);
+  box-shadow: 0 0 5px var(--text-1);
   flex-shrink: 0
 }
 
@@ -4609,7 +4600,7 @@ select {
 
 .ws-login {
   font-size: 10px;
-  color: varvar(--t2);
+  color: var(--text-1);
 }
 
 .ws-pills {
@@ -4634,8 +4625,8 @@ select {
 }
 
 .ws-dot-active {
-  background: varvar(--t2);
-  box-shadow: 0 0 4px varvar(--t2);
+  background: var(--text-1);
+  box-shadow: 0 0 4px var(--text-1);
 }
 
 .ws-dot-neutral {
@@ -4647,11 +4638,11 @@ select {
 }
 
 .ws-pill-label {
-  color: varvar(--t2);
+  color: var(--text-1);
 }
 
 .ws-pill-value {
-  color: varvar(--t2);
+  color: var(--text-1);
 }
 
 .ws-pill-pnl {
@@ -4714,7 +4705,7 @@ select {
 
 .card-subtitle {
   font-size: 11.5px;
-  color: varvar(--t2);
+  color: var(--text-1);
 }
 
 /* Toggle Switch */
@@ -4790,7 +4781,7 @@ input:checked+.toggle-track+.toggle-thumb {
 }
 
 .stat-value-secondary {
-  color: varvar(--t2);
+  color: var(--text-1);
 }
 
 .stat-value-tertiary {
@@ -4825,7 +4816,7 @@ input:checked+.toggle-track+.toggle-thumb {
 
 .tag-real {
   background: rgba(0, 212, 255, 0.2);
-  color: varvar(--t2);
+  color: var(--text-1);
 }
 
 /* Transactions List */
@@ -4853,7 +4844,7 @@ input:checked+.toggle-track+.toggle-thumb {
 
 .tag.sol {
   background: rgba(0, 212, 255, 0.2);
-  color: varvar(--t2);
+  color: var(--text-1);
 }
 
 .tag.eth {
@@ -4877,7 +4868,7 @@ input:checked+.toggle-track+.toggle-thumb {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, varvar(--t2), transparent);
+  background: linear-gradient(90deg, transparent, var(--text-1), transparent);
   animation: scan 2s linear infinite;
 }
 
@@ -5120,7 +5111,7 @@ input:checked+.toggle-track+.toggle-thumb {
 
 .wallet-card-footer {
   font-size: 10px;
-  color: varvar(--t2);
+  color: var(--text-1);
   font-family: var(--mono);
 }
 
@@ -5193,7 +5184,7 @@ input:checked+.toggle-track+.toggle-thumb {
 
 .address-label {
   font-size: 10px;
-  color: varvar(--t2);
+  color: var(--text-1);
   margin-bottom: 5px;
   font-weight: 700;
 }
@@ -5237,7 +5228,7 @@ input:checked+.toggle-track+.toggle-thumb {
 .alert-info {
   background: rgba(0, 212, 255, 0.1);
   border: 1px solid rgba(0, 212, 255, 0.2);
-  color: varvar(--t2);
+  color: var(--text-1);
 }
 
 .alert-warning {
@@ -5325,7 +5316,7 @@ input:checked+.toggle-track+.toggle-thumb {
 }
 
 .available-value {
-  color: varvar(--t2);
+  color: var(--text-1);
   font-family: var(--mono);
 }
 
@@ -5435,7 +5426,7 @@ input:checked+.toggle-track+.toggle-thumb {
   border-radius: 8px;
   font-family: var(--mono);
   font-size: 11px;
-  color: varvar(--t2);
+  color: var(--text-1);
   word-break: break-all;
   margin-bottom: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -5475,7 +5466,7 @@ input:checked+.toggle-track+.toggle-thumb {
 }
 
 .earned-value {
-  color: varvar(--t2);
+  color: var(--text-1);
 }
 
 /* Tag Variants */
@@ -5489,7 +5480,7 @@ input:checked+.toggle-track+.toggle-thumb {
 
 .tag-cyan {
   background: rgba(0, 212, 255, 0.2);
-  color: varvar(--t2);
+  color: var(--text-1);
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 10px;
@@ -5540,7 +5531,7 @@ input:checked+.toggle-track+.toggle-thumb {
 
 .progress-note {
   font-size: 11px;
-  color: varvar(--t2);
+  color: var(--text-1);
 }
 
 /* Right column specific */
@@ -5915,7 +5906,7 @@ input:checked+.toggle-track+.toggle-thumb {
 .auth-sub {
   text-align: center;
   font-size: 11.5px;
-  color: varvar(--t2);
+  color: var(--text-1);
   margin-bottom: 22px
 }
 
@@ -5982,7 +5973,7 @@ input:checked+.toggle-track+.toggle-thumb {
 }
 
 .fi::placeholder {
-  color: varvar(--t2)
+  color: var(--text-1)
 }
 
 select.fi {
@@ -6151,7 +6142,7 @@ select.fi option {
   padding: 10px 8px 3px;
   font-size: 9.5px;
   font-weight: 800;
-  color: varvar(--t2);
+  color: var(--text-1);
   letter-spacing: 1.8px;
   text-transform: uppercase
 }
@@ -6170,11 +6161,7 @@ select.fi option {
   position: relative;
   white-space: nowrap
 }
-
-.ni:hover {
-  background: var(--pgg);
-  color: var(--t1)
-}
+ 
 
 .ni.on {
   background: var(--pg);
@@ -6261,7 +6248,7 @@ select.fi option {
 .sb-bot-up {
   font-size: 10px;
   font-family: var(--mono);
-  color: varvar(--t2)
+  color: var(--text-1)
 }
 
 /* ── MAIN ── */
@@ -6298,7 +6285,7 @@ select.fi option {
 }
 
 .tb-title span {
-  color: varvar(--t2);
+  color: var(--text-1);
   font-weight: 400;
   font-size: 12px
 }
@@ -6340,7 +6327,7 @@ select.fi option {
 .gas-p {
   font-family: var(--mono);
   font-size: 10.5px;
-  color: varvar(--t2);
+  color: var(--text-1);
   background: var(--card);
   border: 1px solid var(--b1);
   padding: 4px 10px;
@@ -6719,7 +6706,7 @@ select.fi option {
 .ml {
   font-size: 10px;
   font-weight: 700;
-  color: varvar(--t2);
+  color: var(--text-1);
   text-transform: uppercase;
   letter-spacing: .7px;
   margin-bottom: 5px
@@ -6901,7 +6888,7 @@ select.fi option {
   padding: 7px 10px;
   font-size: 10px;
   font-weight: 700;
-  color: varvar(--t2);
+  color: var(--text-1);
   text-transform: uppercase;
   letter-spacing: .5px;
   border-bottom: 1px solid var(--b1);
@@ -6980,7 +6967,7 @@ select.fi option {
 
 .ec-lbl {
   font-size: 10px;
-  color: varvar(--t2);
+  color: var(--text-1);
   font-weight: 600
 }
 
@@ -6999,7 +6986,7 @@ select.fi option {
 
 .ec-time {
   font-size: 9.5px;
-  color: varvar(--t2);
+  color: var(--text-1);
   font-family: var(--mono);
   margin-top: 3px
 }
@@ -7177,7 +7164,7 @@ select.fi option {
 }
 
 .tx-t {
-  color: varvar(--t2);
+  color: var(--text-1);
   min-width: 50px;
   flex-shrink: 0
 }
@@ -7252,7 +7239,7 @@ select.fi option {
 
 .sc-d {
   font-size: 10.5px;
-  color: varvar(--t2);
+  color: var(--text-1);
   margin-bottom: 6px
 }
 
@@ -7273,7 +7260,7 @@ select.fi option {
 
 .sg-l {
   font-size: 9.5px;
-  color: varvar(--t2);
+  color: var(--text-1);
   margin-bottom: 3px;
   font-weight: 700;
   text-transform: uppercase;
@@ -7766,7 +7753,7 @@ select.fi option {
 
 .fu-time {
   font-size: 9px;
-  color: varvar(--t2)
+  color: var(--text-1)
 }
 
 .fu-dot {
@@ -7885,7 +7872,7 @@ select.fi option {
 
 .bps-l {
   font-size: 9.5px;
-  color: varvar(--t2);
+  color: var(--text-1);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .3px;
@@ -8097,4 +8084,10 @@ hr {
 .close-sidebar-btn:hover {
   background: rgba(255, 255, 255, 0.15);
   transform: rotate(90deg);
+}
+
+@media(max-width:991px){
+.pchip{
+  display: none;
+}
 }

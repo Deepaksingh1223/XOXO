@@ -5,7 +5,16 @@ import './globals.css'
 import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
-
+// SEO + Favicon
+export const metadata = {
+  title: "XOXOFX",
+  description: "Trading",
+  icons: {
+    icon: "/favicon.png",  
+    shortcut: "/faviocn.png",
+    apple: "/faviocn.png",
+  },
+};
 
 export default function RootLayout({ children }) {
   return (

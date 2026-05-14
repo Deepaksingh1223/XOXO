@@ -310,7 +310,7 @@ export default function AllSection() {
             {/* Hero Video */}
             <div className="col-xl-6 wow fadeInRight" data-wow-delay=".3s">
               <div className="hero-video"> 
-                 <Image src="/assets/images/home-banner.png" alt="About" width={800} height={400} />
+                 <Image src="/assets/images/home-banner2.png" alt="About" width={800} height={600} />
               </div>
             </div>
           </div>
@@ -335,7 +335,7 @@ export default function AllSection() {
             <div className="col-lg-5 col-xxl-5 wow fadeInLeft" data-wow-delay=".2s">
               <div className="img-box1">
                 <div className="img1 image scale">
-                  <Image src="/assets/images/Capital-Migration-img.jpeg" alt="About" width={500} height={400} />
+                  <Image src="/assets/images/Capital-Migration-img.png" alt="About" width={500} height={400} />
                 </div>
               </div>
             </div>

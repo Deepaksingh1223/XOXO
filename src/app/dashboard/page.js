@@ -26,29 +26,29 @@ export default function DashboardPage() {
   const [showAnnouncement, setShowAnnouncement] = useState(true);
 
   // Hero slider data
- // Hero slider data - IMAGES ONLY
-const slides = [
-  {
-    id: 0,
-    image: "/images/slider1.jpg",  // Replace with your actual image path
-    alt: "Trading Dashboard"
-  },
-  {
-    id: 1,
-    image: "/images/slider1.jpg",
-    alt: "Profit Analytics"
-  },
-  {
-    id: 2,
-    image: "/images/slider1.jpg",
-    alt: "Market Data"
-  },
-  {
-    id: 3,
-    image: "/images/slider1.jpg",
-    alt: "Bot Performance"
-  }
-];
+  // Hero slider data - IMAGES ONLY
+  const slides = [
+    {
+      id: 0,
+      image: "/assets/images/slider1.jpg",
+      alt: "Trading Dashboard"
+    },
+    {
+      id: 1,
+      image: "/assets/images/slider1.jpg",
+      alt: "Profit Analytics"
+    },
+    {
+      id: 2,
+      image: "/assets/images/slider1.jpg",
+      alt: "Market Data"
+    },
+    {
+      id: 3,
+      image: "/assets/images/slider1.jpg",
+      alt: "Bot Performance"
+    }
+  ];
   const changeSlide = useCallback((index) => {
     const slidesWrap = slidesWrapRef.current;
     const dots = dotsRef.current?.querySelectorAll('.sldot');
@@ -526,121 +526,121 @@ const slides = [
         </div>
       )}
 
-
-      {/* HERO SLIDER */}
-   {/* HERO SLIDER - IMAGES ONLY */}
-<div className="hero sc" style={{ position: 'relative', overflow: 'hidden', borderRadius: '16px' }}>
-  <div 
-    ref={slidesWrapRef} 
-    style={{ 
-      display: 'flex', 
-      transition: 'transform 0.5s ease',
-      width: '100%'
-    }}
-  >
-    {slides.map((slide) => (
-      <div 
-        key={slide.id} 
-        style={{ 
-          minWidth: '100%',
-          position: 'relative'
-        }}
-      >
-        <img 
-          src={slide.image} 
-          alt={slide.alt}
+ 
+      <div className="hero sc" style={{ position: 'relative', overflow: 'hidden', borderRadius: '16px' }}>
+        <div
+          ref={slidesWrapRef}
           style={{
-            width: '100%',
-            height: '300px',
-            objectFit: 'cover',
-            display: 'block',
-            borderRadius: '16px'
+            display: 'flex',
+            transition: 'transform 0.5s ease',
+            width: '100%'
           }}
-        />
+        >
+          {slides.map((slide) => (
+            <div
+              key={slide.id}
+              style={{
+                minWidth: '100%',
+                position: 'relative',
+                height: '200px'
+              }}
+            >
+              <img
+                src={slide.image}
+                alt={slide.alt}
+                className='img-fluid'
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  display: 'block',
+                  borderRadius: '16px'
+                }}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Dots */}
+        <div
+          ref={dotsRef}
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '8px',
+            marginTop: '12px',
+            position: 'absolute',
+            bottom: '12px',
+            left: 0,
+            right: 0,
+            zIndex: 10
+          }}
+        >
+          {slides.map((slide) => (
+            <div
+              key={slide.id}
+              className={`sldot ${slide.id === currentSlide ? 'on' : ''}`}
+              data-i={slide.id}
+              style={{
+                width: '8px',
+                height: '8px',
+                borderRadius: '50%',
+                background: slide.id === currentSlide ? '#a78bfa' : 'rgba(255,255,255,0.5)',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease'
+              }}
+            ></div>
+          ))}
+        </div>
+
+        {/* Navigation Buttons */}
+        <button
+          onClick={prevSlide}
+          style={{
+            position: 'absolute',
+            left: '10px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            background: 'rgba(0,0,0,0.5)',
+            border: 'none',
+            color: 'white',
+            fontSize: '24px',
+            cursor: 'pointer',
+            width: '32px',
+            height: '32px',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 10
+          }}
+        >
+          ‹
+        </button>
+        <button
+          onClick={nextSlide}
+          style={{
+            position: 'absolute',
+            right: '10px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            background: 'rgba(0,0,0,0.5)',
+            border: 'none',
+            color: 'white',
+            fontSize: '24px',
+            cursor: 'pointer',
+            width: '32px',
+            height: '32px',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 10
+          }}
+        >
+          ›
+        </button>
       </div>
-    ))}
-  </div>
-  
-  {/* Dots */}
-  <div 
-    ref={dotsRef} 
-    style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      gap: '8px', 
-      marginTop: '12px',
-      position: 'absolute',
-      bottom: '12px',
-      left: 0,
-      right: 0,
-      zIndex: 10
-    }}
-  >
-    {slides.map((slide) => (
-      <div
-        key={slide.id}
-        className={`sldot ${slide.id === currentSlide ? 'on' : ''}`}
-        data-i={slide.id}
-        style={{ 
-          width: '8px', 
-          height: '8px', 
-          borderRadius: '50%', 
-          background: slide.id === currentSlide ? '#a78bfa' : 'rgba(255,255,255,0.5)',
-          cursor: 'pointer',
-          transition: 'all 0.3s ease'
-        }}
-      ></div>
-    ))}
-  </div>
-  
-  {/* Navigation Buttons */}
-  <button 
-    onClick={prevSlide} 
-    style={{ 
-      position: 'absolute', 
-      left: '10px', 
-      top: '50%', 
-      transform: 'translateY(-50%)', 
-      background: 'rgba(0,0,0,0.5)', 
-      border: 'none', 
-      color: 'white', 
-      fontSize: '24px', 
-      cursor: 'pointer', 
-      width: '32px', 
-      height: '32px', 
-      borderRadius: '50%',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      zIndex: 10
-    }}
-  >
-    ‹
-  </button>
-  <button 
-    onClick={nextSlide} 
-    style={{ 
-      position: 'absolute', 
-      right: '10px', 
-      top: '50%', 
-      transform: 'translateY(-50%)', 
-      background: 'rgba(0,0,0,0.5)', 
-      border: 'none', 
-      color: 'white', 
-      fontSize: '24px', 
-      cursor: 'pointer', 
-      width: '32px', 
-      height: '32px', 
-      borderRadius: '50%',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      zIndex: 10
-    }}
-  >
-    ›
-  </button>
-</div>
       {/* INCOME GRID */}
       <div className="it-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '12px', marginBottom: '20px' }}>
         <div className="it bg-p gl gl-p" onClick={openRef} style={{ cursor: "pointer", padding: '14px', borderRadius: '12px', background: 'rgba(124,58,237,0.1)', border: '1px solid rgba(124,58,237,0.2)' }}>
@@ -698,7 +698,7 @@ const slides = [
       {/* BOT ACTIVATE STRIP */}
 
 
-  
+
 
       {/* REST OF YOUR CODE CONTINUES... */}
       {/* MID */}
@@ -730,22 +730,26 @@ const slides = [
             <button className="bacti" onClick={openBot} style={{ flex: 1, background: 'linear-gradient(135deg, #7c3aed, #06b6d4)', border: 'none', padding: '8px', borderRadius: '8px', color: 'white', cursor: 'pointer' }}>▶ &nbsp;Activate Bot</button>
             <button className="bpau" onClick={pauseBot} style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid var(--b1)', padding: '8px 16px', borderRadius: '8px', cursor: 'pointer' }}>⏸ Pause</button>
           </div>
-              {/* Bot Notification (second) */}
-      <div className="notif-bar" id="botNotif2" style={{ display: isBotActive ? 'flex' : 'none',
-         background: 'linear-gradient(135deg, rgba(16,185,129,0.1), rgba(6,182,212,0.1))',
-          border: '1px solid rgba(16,185,129,0.3)', borderRadius: '10px', padding: '12px 16px', marginBottom: '20px', alignItems: 'center', gap: '10px' }}>
-        <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
-          <polyline points="2,8 5.5,11.5 14,3.5" stroke="#10b981" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-        <span style={{ fontSize: '12px' }}>
-          <strong>Your Bot is now ACTIVATED!</strong> — Scanning 142+ opportunities/min across SOL, ETH &amp; BSC. First profit expected within 60 seconds.
-        </span>
-        <div className="timer-box" id="timerBox2" style={{ display: isBotActive ? 'flex' : 'none', alignItems: 'center', gap: '6px',
-           background: 'rgba(16,185,129,0.1)', padding: '4px 12px', borderRadius: '20px', marginTop:"15px" }}>
-          <div className="timer-num" style={{ fontFamily: 'monospace', fontSize: '14px', fontWeight: 'bold', color: '#10b981' }}>{formatTime(timerSeconds)}</div>
-          <div className="timer-lbl" style={{ fontSize: '10px', color: '#10b981' }}>🟢 Bot Running</div>
-        </div>
-      </div>
+          {/* Bot Notification (second) */}
+          <div className="notif-bar" id="botNotif2" style={{
+            display: isBotActive ? 'flex' : 'none',
+            background: 'linear-gradient(135deg, rgba(16,185,129,0.1), rgba(6,182,212,0.1))',
+            border: '1px solid rgba(16,185,129,0.3)', borderRadius: '10px', padding: '12px 16px', marginBottom: '20px', alignItems: 'center', gap: '10px'
+          }}>
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+              <polyline points="2,8 5.5,11.5 14,3.5" stroke="#10b981" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <span style={{ fontSize: '12px' }}>
+              <strong>Your Bot is now ACTIVATED!</strong> — Scanning 142+ opportunities/min across SOL, ETH &amp; BSC. First profit expected within 60 seconds.
+            </span>
+            <div className="timer-box" id="timerBox2" style={{
+              display: isBotActive ? 'flex' : 'none', alignItems: 'center', gap: '6px',
+              background: 'rgba(16,185,129,0.1)', padding: '4px 12px', borderRadius: '20px', marginTop: "15px"
+            }}>
+              <div className="timer-num" style={{ fontFamily: 'monospace', fontSize: '14px', fontWeight: 'bold', color: '#10b981' }}>{formatTime(timerSeconds)}</div>
+              <div className="timer-lbl" style={{ fontSize: '10px', color: '#10b981' }}>🟢 Bot Running</div>
+            </div>
+          </div>
         </div>
         <div className="oppcard" >
           <div className="ch" style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px' }}>
