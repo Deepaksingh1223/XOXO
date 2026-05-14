@@ -33,6 +33,7 @@
     --slidingAT: 1.3s;
     --controlSize: 60px;
 }
+
 html,
 body {
     scroll-behavior: auto !important
@@ -10051,6 +10052,7 @@ ol.widget_recent_comments,
 .header-layout2 .menu-area {
     padding: 10px 0;
     border-bottom: 1px solid #edf2fa;
+    background: #fff;
 }
 
 .header-layout2 .main-menu>ul>li>a {
@@ -13520,10 +13522,12 @@ ul.comment-list .th-comment-item:first-child:not(.children .th-comment-item)>.th
     letter-spacing: .02em;
     color: var(--theme-color)
 }
+
 .new-banner-video {
     width: 100%;
     height: 700px !important;
 }
+
 @media(max-width: 1199px) {
     .btn-group:has(.call-btn) {
         gap: 25px
@@ -13534,10 +13538,11 @@ ul.comment-list .th-comment-item:first-child:not(.children .th-comment-item)>.th
     .btn-group:has(.call-btn) {
         gap: 20px
     }
+
     .new-banner-video {
-    width: 100%;
-    height: auto !important;
-}
+        width: 100%;
+        height: auto !important;
+    }
 }
 
 @media(max-width: 1199px) {
@@ -28446,7 +28451,7 @@ span.select2-selection.select2-selection--single:focus {
 .service-card:hover .box-icon img {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
-        filter: invert(1) !important;
+    filter: invert(1) !important;
 }
 
 @media(max-width: 767px) {
@@ -38274,10 +38279,88 @@ span.select2-selection.select2-selection--single:focus {
     }
 
 }
+
 .th-btn .icon img {
     filter: invert(1) !important;
 }
 
-a.th-btn.black-border.fw-btn.add-hover:hover{
+a.th-btn.black-border.fw-btn.add-hover:hover {
     color: #fff !important;
+}
+
+.sd-hero-bg {
+    overflow: hidden;
+    padding-top: 300px;
+    padding-bottom: 40px;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.z-index-1 {
+    position: relative;
+    z-index: 1;
+}
+
+.sd-hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.sd-hero-video video {
+    object-fit: cover;
+    background-size: covar;
+}
+
+.sd-hero-title {
+    font-size: 280px;
+    line-height: 0.8;
+    margin-bottom: 220px;
+    color: #fff
+}
+
+.sd-hero-info img {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    width: 150px;
+}
+
+.sd-hero-info span,
+.sd-hero-info a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+    letter-spacing: -0.05em;
+    color: #fff;
+}
+
+.sd-hero-bg::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 767px) {
+    .sd-hero-title {
+        font-size: 70px;
+        margin-bottom: 100px;
+    }
+
+    .sd-hero-video video {
+        height: 100vh;
+    }
+
+    .sd-hero-bg {
+        padding-top: 180px;
+    }
 }
