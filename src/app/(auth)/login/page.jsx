@@ -133,7 +133,7 @@ export default function Register() {
     setIsRegistering(true);
     setTimeout(() => { 
       setIsRegistering(false); 
-      alert("Login successful! Welcome back to DexChainPro!");
+      alert("Login successful! Welcome back to XOXOFX!");
       router.push('/dashboard');
     }, 2000);
   };
@@ -147,7 +147,7 @@ export default function Register() {
     if (password !== confirmPassword) { alert("Passwords do not match"); return; }
     if (password.length < 6) { alert("Password must be at least 6 characters"); return; }
     setIsRegistering(true);
-    setTimeout(() => { setIsRegistering(false); alert("Registration successful! Welcome to DexChainPro!"); setActiveTab("login"); }, 2000);
+    setTimeout(() => { setIsRegistering(false); alert("Registration successful! Welcome to XOXOFX!"); setActiveTab("login"); }, 2000);
   };
 
   const handleWallet = (id) => {
@@ -199,7 +199,7 @@ export default function Register() {
           <div className="dcp-modal-header">
             <div className="dcp-brand">
               <span className="dcp-brand-name">
-                DexChain<span>Pro</span>
+               XOXO<span>FX </span>
               </span>
             </div>
           </div>
@@ -233,7 +233,7 @@ export default function Register() {
                 <p className="dcp-greeting">
                   Welcome <span>Back</span>
                 </p>
-                <p className="dcp-sub">Login to your DexChainPro account</p>
+                <p className="dcp-sub">Login to your XOXOFX account</p>
 
                 {/* Email Field */}
                 <div className="dcp-field">
@@ -314,7 +314,7 @@ export default function Register() {
                 <p className="dcp-greeting">
                   Create <span>Account</span>
                 </p>
-                <p className="dcp-sub">Join DexChainPro to start trading</p>
+                <p className="dcp-sub">Join XOXOFX to start trading</p>
 
                 {/* Username Field */}
                 <div className="dcp-field">
@@ -544,7 +544,7 @@ export default function Register() {
                     </svg>
                   </div>
                   <div className="dcp-mm-info-text">
-                    <strong>DexChainPro is requesting access</strong>
+                    <strong>XOXOFX is requesting access</strong>
                     This site wants to connect to your MetaMask wallet and view your account address.
                   </div>
                 </div>

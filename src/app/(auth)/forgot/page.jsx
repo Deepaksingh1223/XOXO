@@ -28,7 +28,7 @@ export default function ForgotPassword() {
           <div className="dcp-modal-header">
             <div className="dcp-brand">
               <span className="dcp-brand-name">
-                DexChain<span>Pro</span>
+               XOXO<span>FX </span>
               </span>
             </div>
           </div>

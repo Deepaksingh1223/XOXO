@@ -3,6 +3,21 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import {
+  FiGrid,
+  FiZap,
+  FiBarChart2,
+  FiCpu,
+  FiRefreshCw,
+  FiCreditCard,
+  FiUsers,
+  FiFileText,
+  FiUser,
+  FiSettings,
+  FiX,
+  FiChevronRight,
+} from "react-icons/fi";
+
 export default function DashboardHeader({
   sidebarOpen,
   setSidebarOpen,
@@ -33,37 +48,47 @@ export default function DashboardHeader({
 
         {/* Close Button */}
         <button className="close-sidebar-btn" onClick={closeSidebar}>
-          ✕
+          <FiX />
         </button>
       </div>
- 
+
       <div className="nb">
         <div className="nlbl">Platform</div>
 
         <Link href="/dashboard" className="ni on">
-          <span className="ic">⬡</span>
+          <span className="ic">
+            <FiGrid />
+          </span>
           <span>Dashboard</span>
         </Link>
 
         <Link href="/dashboard/engine" className="ni">
-          <span className="ic">⚡</span>
+          <span className="ic">
+            <FiZap />
+          </span>
           <span>Arb Engine</span>
           <span className="npip pg"></span>
         </Link>
 
         <Link href="/dashboard/analytics" className="ni">
-          <span className="ic">📊</span>
+          <span className="ic">
+            <FiBarChart2 />
+          </span>
           <span>Analytics</span>
         </Link>
 
         <Link href="/dashboard/simulate" className="ni">
-          <span className="ic">🧪</span>
+          <span className="ic">
+            <FiCpu />
+          </span>
           <span>Simulate</span>
           <span className="nbadge">BETA</span>
         </Link>
 
         <Link href="/dashboard/auto-trade" className="ni">
-          <span className="ic">🔄</span>
+          <span className="ic">
+            <FiRefreshCw />
+          </span>
           <span>Auto-Trade</span>
           <span className="npip py"></span>
         </Link>
@@ -73,17 +98,23 @@ export default function DashboardHeader({
         <div className="nlbl">Finance</div>
 
         <Link href="/dashboard/wallet" className="ni">
-          <span className="ic">◈</span>
+          <span className="ic">
+            <FiCreditCard />
+          </span>
           <span>Wallet</span>
         </Link>
 
         <Link href="/dashboard/community" className="ni">
-          <span className="ic">◉</span>
+          <span className="ic">
+            <FiUsers />
+          </span>
           <span>Community</span>
         </Link>
 
         <Link href="/dashboard/reports" className="ni">
-          <span className="ic">📋</span>
+          <span className="ic">
+            <FiFileText />
+          </span>
           <span>Reports</span>
         </Link>
       </div>
@@ -92,12 +123,16 @@ export default function DashboardHeader({
         <div className="nlbl">Account</div>
 
         <Link href="/dashboard/profile" className="ni">
-          <span className="ic">◎</span>
+          <span className="ic">
+            <FiUser />
+          </span>
           <span>Profile</span>
         </Link>
 
         <Link href="/dashboard/settings" className="ni">
-          <span className="ic">⚙</span>
+          <span className="ic">
+            <FiSettings />
+          </span>
           <span>Settings</span>
         </Link>
       </div>
@@ -111,7 +146,9 @@ export default function DashboardHeader({
             <div className="ulvl">★ PRO TRADER · LV.12</div>
           </div>
 
-          <div className="uarr">›</div>
+          <div className="uarr">
+            <FiChevronRight />
+          </div>
         </div>
 
         <div className="chs">
