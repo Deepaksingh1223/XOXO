@@ -253,64 +253,41 @@ export default function AllSection() {
 
   return (
     <>
-      {/* ===== HERO SECTION ===== */}
-      <div className="th-hero-wrapper hero-1" id="hero">
-        <div className="container-fluid p-0 pe-lg-4 ps-lg-4">
-          <div className="row gy-4">
-            <div className="col-xl-6">
-              <div className="hero-style1">
-                <span className="sub-title text-anime-style-2 wow fadeInUp" data-wow-delay=".1s">
-                  XOXOFX
-                </span>
-                <h1 className="hero-title text-anime-style-3 wow fadeInUp" data-wow-delay=".2s">
-                  Arbitrage. Automated. On-Chain. Profitable.
+      {/* ===== HERO SECTION (VIDEO BACKGROUND) ===== */}
+      <div className="sd-hero-area sd-hero-bg p-relative z-index-1">
+        <div className="sd-hero-video">
+          <video loop muted autoPlay playsInline>
+            <source src="/assets/BG-Video.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-12">
+              <div className="sd-hero-title-box text-center">
+                <h1 className="sd-hero-title" id="heroText">
+                  <span style={{ translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0px)', opacity: 1 }}>X</span>
+                  <span style={{ translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0px)', opacity: 1 }}>O</span>
+                  <span style={{ translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0px)', opacity: 1 }}>X</span>
+                  <span style={{ translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0px)', opacity: 1 }}>O</span>
+                  <span style={{ translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0px)', opacity: 1 }}>F</span> 
+                  <span style={{ translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0px)', opacity: 1 }}>X</span>
                 </h1>
-                <p className="hero-text wow fadeInUp" data-wow-delay=".4s">
-                  The All-in-One Intelligent Arbitrage System for DeFi Markets. Built natively on blockchain with real-time transparency, high-performance execution, and non-custodial security.
-                </p>
-                <div className="wow fadeInUp" data-wow-delay=".6s">
-                  <Link href="/" className="th-btn">
-                    Launch App{' '}
-                    <span className="icon">
-                      <Image src="/assets/img/icon/arrow-right.svg" alt="" width={16} height={16} />
-                    </span>
-                  </Link>
-                </div>
-                <div className="discount-wrapp scroll-down wow fadeInUp add-phone-none" data-wow-delay=".8s">
-                  <Link href="#about-sec" className="spin">
-                    <div className="logo-img">
-                      <Image src="/assets/img/logo-icon.svg" alt="" width={50} height={50} />
-                    </div>
-                  </Link> 
-                </div>
-              </div>
-
-              {/* Hero Stats Cards */}
-              <div className="row gy-4 justify-content-center">
-                {[
-                  { num: '24', suffix: '/7', label: 'Live Opportunities' },
-                  { num: '1', suffix: 's', label: 'Execution Speed' },
-                  { num: '100', suffix: '%', label: 'On-Chain Transparent' },
-                ].map((card, index) => (
-                  <div className="col-sm-6 col-6 col-md-4 wow fadeInUp" data-wow-delay={`${(index + 1) * 0.2}s`} key={index}>
-                    <div className="hero-card bounce__anim">
-                      <div className="media-body">
-                        <h2 className="box-number">
-                          <span className="counter-number">{card.num}</span>
-                          {card.suffix}
-                        </h2>
-                        <p className="box-text">{card.label}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
               </div>
             </div>
+          </div>
 
-            {/* Hero Video */}
-            <div className="col-xl-6 wow fadeInRight" data-wow-delay=".3s">
-              <div className="hero-video"> 
-                 <Image src="/assets/images/home-banner2.png" alt="About" width={800} height={600} />
+          <div className="row align-items-center">
+            <div className="col-md-6 col-sm-7">
+              <div className="sd-hero-info d-flex align-items-center mb-40">
+                <img src="/assets/avater-1.png" alt="" />
+                <span>
+                  Trade The <br /> Markets. Today
+                </span>
+              </div>
+            </div>
+            <div className="col-md-6 col-sm-5">
+              <div className="sd-hero-info text-start text-sm-end mb-40">
+                <a href="mailto:trade@XOXOFXfx.com">trade@xoxofx.com</a>
               </div>
             </div>
           </div>
