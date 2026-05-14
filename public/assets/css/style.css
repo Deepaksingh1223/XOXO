@@ -38315,6 +38315,8 @@ a.th-btn.black-border.fw-btn.add-hover:hover {
 .sd-hero-video video {
     object-fit: cover;
     background-size: covar;
+    width: 100%;
+    height: 100%;
 }
 
 .sd-hero-title {
