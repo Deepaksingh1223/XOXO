@@ -1,35 +1,38 @@
 :root {
-    --theme-color: #7B5DFF;
-    --theme-color2: #D4FF12;
-    --title-color: #06050B;
-    --body-color: #484848;
-    --smoke-color: #D4D4D4;
-    --smoke-color2: #F5F5F5;
-    --smoke-color3: #C5DACC;
-    --smoke-color4: #E9F5ED;
-    --black-color: #000000;
-    --black-color2: #0A0A0A;
-    --gray-color: #D8DDE1;
+    --theme-color: #00C853;
+    --theme-color2: #002B5B;
+    --title-color: #001B3A;
+    --body-color: #4A5568;
+    --smoke-color: #DCE3EA;
+    --smoke-color2: #F4F8FB;
+    --smoke-color3: #D8F3E4;
+    --smoke-color4: #EDFDF4;
+    --black-color: #000814;
+    --black-color2: #001D3D;
+    --gray-color: #B8C4D0;
     --white-color: #ffffff;
-    --light-color: #B7BEC8;
-    --yellow-color: #FFB539;
-    --success-color: #28a745;
-    --error-color: #dc3545;
-    --th-border-color: #E0E0E0;
+    --light-color: #8FA3B8;
+    --yellow-color: #FFD166;
+    --success-color: #16C172;
+    --error-color: #E63946;
+    --th-border-color: #D6E0EA;
+
     --title-font: "Sora", sans-serif;
     --title-font2: "Urbanist", sans-serif;
     --body-font: "Work Sans", sans-serif;
     --icon-font: "Font Awesome 6 Pro";
+
     --main-container: 1620px;
     --container-gutters: 24px;
+
     --section-space: 120px;
     --section-space-mobile: 80px;
     --section-title-space: 60px;
+
     --ripple-ani-duration: 5s;
     --slidingAT: 1.3s;
-    --controlSize: 60px
+    --controlSize: 60px;
 }
-
 html,
 body {
     scroll-behavior: auto !important
@@ -46,7 +49,7 @@ body {
 }
 
 body.theme {
-    --theme-color: #456FF8
+    --theme-color: #18a34d
 }
 
 body.theme2 {
@@ -3078,7 +3081,7 @@ input[type=time]::-webkit-calendar-picker-indicator {
 
 .th-btn:hover,
 .th-btn.active {
-    color: var(--title-color)
+    color: #fff
 }
 
 .th-btn:hover:before,
@@ -25796,7 +25799,7 @@ span.select2-selection.select2-selection--single:focus {
 
 .award-item:nth-child(3) {
     background: #f0f3fe;
-    border: 1px solid #456ff8;
+    border: 1px solid #18a34d;
     border-radius: 50px;
     -webkit-transform: rotate(-15deg);
     transform: rotate(-15deg);
@@ -28442,7 +28445,8 @@ span.select2-selection.select2-selection--single:focus {
 
 .service-card:hover .box-icon img {
     -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg)
+    transform: rotateY(180deg);
+        filter: invert(1) !important;
 }
 
 @media(max-width: 767px) {
@@ -38211,7 +38215,7 @@ span.select2-selection.select2-selection--single:focus {
     display: block;
     width: 22px;
     height: 2px;
-    background: #55abe5;
+    background: #18a34d;
     border-radius: 2px;
     transition: background 0.2s;
 }
@@ -38269,4 +38273,7 @@ span.select2-selection.select2-selection--single:focus {
         margin-top: 0px;
     }
 
+}
+.th-btn .icon img {
+    filter: invert(1) !important;
 }

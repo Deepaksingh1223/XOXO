@@ -196,8 +196,8 @@ export default function Header() {
             onClick={closeSideMenu}
             aria-label="Close side menu"
           >
-            <span style={{ border: "1px solid #456ff8", margin: "0 2px" }}></span>
-            <span style={{ border: "1px solid #456ff8", margin: "0 2px" }}></span>
+            <span style={{ border: "1px solid #18a34d", margin: "0 2px" }}></span>
+            <span style={{ border: "1px solid #18a34d", margin: "0 2px" }}></span>
           </button>
 
           {/* About widget */}
