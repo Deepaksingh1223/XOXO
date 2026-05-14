@@ -32,7 +32,7 @@ export default function Footer() {
               </div>
               <div className="col-lg-6 col-xl-5">
                 <div className="ps-xl-5">
-                  <h2 className="box-title text-white">TryXOXOFX Today Free</h2>
+                  <h2 className="box-title text-white">Try Xoxo Fx Today Free</h2>
                   <div className="btn-group justify-content-center justify-content-lg-start">
                     <Link href="/" className="th-btn2">Start Free Trial</Link>
                     <Link href="/" className="th-btn2 style3">Book a Demo</Link>
