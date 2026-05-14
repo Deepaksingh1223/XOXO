@@ -327,7 +327,8 @@ button {
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
-  gap: 11px
+  gap: 11px;
+  background: var(--card);
 }
 
 .lmark {
@@ -8070,4 +8071,30 @@ hr {
 
 [data-theme="light"] .overlay {
   background: rgba(240, 238, 255, 0.88)
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: var(--card);
+}
+
+.close-sidebar-btn {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background:var(--card);
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.close-sidebar-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: rotate(90deg);
 }
